@@ -16,8 +16,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.Matchers.is;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -113,7 +112,7 @@ public class ControladorUsuarioTest {
 
         doReturn(usuarioDTO).when(servicioUsuario).crear(any());
 
-        mockMvc1.perform(get("/usuario/modificarUsuario")
+        mockMvc1.perform(put("/usuario/modificarUsuario")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(asJsonString(returnUsuario)))
                 .andExpect(status().isOk())
@@ -143,8 +142,6 @@ public class ControladorUsuarioTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(asJsonString(returnUsuario)))
                 .andExpect(status().isOk());
-
-
 
     }
 }

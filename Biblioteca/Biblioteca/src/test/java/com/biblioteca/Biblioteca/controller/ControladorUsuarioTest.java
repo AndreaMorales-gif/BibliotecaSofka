@@ -70,7 +70,7 @@ public class ControladorUsuarioTest {
     }
 
     @Test
-    @DisplayName("Buscar Recursos")
+    @DisplayName("Buscar Usuarios")
     void buscarTodos() throws Exception {
         UsuarioDTO returnUsuario = new UsuarioDTO();
         UsuarioDTO usuarioDTO = new UsuarioDTO();
@@ -96,7 +96,7 @@ public class ControladorUsuarioTest {
     }
 
     @Test
-    @DisplayName("actualizar")
+    @DisplayName("actualizar usuario")
     void actalizar() throws Exception {
         UsuarioDTO returnUsuario = new UsuarioDTO();
         UsuarioDTO usuarioDTO = new UsuarioDTO();
@@ -122,7 +122,7 @@ public class ControladorUsuarioTest {
     }
 
     @Test
-    @DisplayName("borrarUsuario")
+    @DisplayName("borrar Usuario")
     void borrarUsuario() throws Exception {
         UsuarioDTO returnUsuario = new UsuarioDTO();
         UsuarioDTO usuarioDTO = new UsuarioDTO();
